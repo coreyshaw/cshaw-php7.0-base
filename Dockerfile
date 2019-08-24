@@ -1,9 +1,9 @@
-FROM ubuntu:16.04
-MAINTAINER Dan Pupius <dan@pupi.us>
+FROM ubuntu:18.04
+MAINTAINER Corey Shaw <ckcshaw@gmail.com>
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get -y update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 php7.0 libapache2-mod-php7.0 php7.0-common php7.0-mbstring php7.0-xmlrpc php7.0-soap php7.0-gd php7.0-xml php7.0-intl php7.0-mysql php7.0-cli php7.0-mcrypt php7.0-zip php7.0-curl
+    apache2 php7.2 libapache2-mod-php7.2 php7.2-common php7.2-mbstring php7.2-xmlrpc php7.2-soap php7.2-gd php7.2-xml php7.2-intl php7.2-mysql php7.2-cli php7.2-mcrypt php7.2-zip php7.2-curl
 
 # Enable apache mods.
 RUN a2enmod php7.0
